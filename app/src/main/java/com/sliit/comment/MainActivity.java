@@ -33,4 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,Comment.class);
         startActivity(intent);
     }
+
+
+
 }
