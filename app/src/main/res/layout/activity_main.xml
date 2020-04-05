@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_write"
         android:layout_width="200dp"
         android:layout_height="39dp"
         android:text="Write a Comment"

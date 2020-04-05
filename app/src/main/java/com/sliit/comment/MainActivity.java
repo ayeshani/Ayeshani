@@ -9,31 +9,26 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
+    private static  Button button_write;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        button = (Button)findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openComment();
-            }
-        });
-
-        /*public void openComment(){
-            Intent intent = new Intent(this,Comment.class);
-        startActivity(intent);
-        }*/
+        onButtonClickListener();
     }
 
-    private void openComment() {
-        Intent intent = new Intent(this,Comment.class);
-        startActivity(intent);
+    public void onButtonClickListener(){
+        button_write = (Button)findViewById(R.id.btn_write);
+        button_write.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("android.intent.action.Comment");
+                        startActivity(intent);
+                    }
+                });
     }
-
-
-
 }
+
+
